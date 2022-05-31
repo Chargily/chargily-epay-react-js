@@ -6,13 +6,7 @@ I hope you will like the package and i am available if you have any issues.
 
 Big thank's to chargily for this great competition!
 
-
-### Tech Stack
-
-**Client:** React, Redux, TailwindCSS, Next js
-
-**Server:** Node, Express
-
+this package work with both react and next js.
 
 
 # Chargily epay -React js- package
