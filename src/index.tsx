@@ -11,15 +11,15 @@ interface Intinvoice  {
   // appKey : string
 }
 
-export const create_payement = async(invoice: Intinvoice)=>{
+export const createPayement = async(invoice: Intinvoice)=>{
   // adding some validation here 
   // const appKey:string = process.env.REACT_APP_CHARGILY_APP_KEY ? process.env.REACT_APP_CHARGILY_APP_KEY : "
   const config = {headers : {Accept: "application/json",  "X-Authorization": "api_YWhz6PxwpZFe5ZEfKOPKROXE7vgtmuvPnGJlJJqajQRaiJPaCvzJYOL0Y0gYjS14"},  timeout: 1000,}
   try {
     const {data} = await axios.post("/baseURL/api/invoice", invoice, config)
-    const {checkout_url} = data
+    const {checkoutUrl} = data
     // Redirect
-    window.location = checkout_url
+    window.location = checkoutUrl
   } catch (error) {
     console.log(error)
   }
